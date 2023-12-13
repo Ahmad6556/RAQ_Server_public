@@ -37,7 +37,7 @@ mongoose
   .connect("mongodb+srv://Ahmad_RAQ:1w3r5y7i8@cluster0.wrxv6um.mongodb.net/?retryWrites=true&w=majority")
   .then(result => {
     app.listen(port, () => {
-      console.log(`http://localhost:${port}`)
+      console.log(`Example app http://localhost:${port}/`)
     })
   })
   .catch(err => {
@@ -107,6 +107,18 @@ app.post("/ordersSS/:id", (req, res) => {
     });
 })
 
+//edit
+
+app.get("/sallahiat/:id", (req, res) => {
+  const id = req.params.id
+  Article.findById(req.params.id)
+    .then((result) => {
+      res.render("sallahiat", { item: result, id: id });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+})
 /*coming soon
 
 app.get('/edit/:id', (req, res) => {
