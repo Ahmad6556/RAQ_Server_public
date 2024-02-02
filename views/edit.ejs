@@ -189,49 +189,59 @@
       </nav>
 
       <nav>
-          <center>
-            <div class="form-floating mx-5 my-3">
-              <h3>الإسم: <%= item.name %></h3>
-            </div>
+        <center>
+          <div class="form-floating mx-5 my-3">
+            <h3>الإسم: <%= item.name %>
+            </h3>
+          </div>
 
-            <div class="form-floating mx-5 my-3">
-              <h3>الإنذارات: <%= item.dangers %>
-              </h3>
-            </div>
+          <div class="form-floating mx-5 my-3">
+            <h3>الإنذارات: <%= item.dangers %>
+            </h3>
+          </div>
 
-            <div class="form-floating mx-5 my-3">
-              <h3>الوضيفة: <%= item.job %>
-              </h3>
-            </div>
-
-
-            <div class="form-floating mx-5 my-3">
-              <h3>المنصة: <%= item.pads %></h3>
-            </div>
-
-            <div class="form-floating mx-5 my-3">
-              <h3>أسم القناة: <%= item.nameChanel %></h3>
-            </div>
+          <div class="form-floating mx-5 my-3">
+            <h3>الوضيفة: <%= item.job %>
+            </h3>
+          </div>
 
 
-            <div class="form-floating mx-5 my-3">
-              <h3>رقم الجوال: <%= item.PhoneNum %></h3>
-            </div>
+          <div class="form-floating mx-5 my-3">
+            <h3>المنصة: <%= item.pads %>
+            </h3>
+          </div>
 
-            <div class="form-floating mx-5 my-3">
-              <h3>النقاط: <%= item.points %></h3>
-            </div>
+          <div class="form-floating mx-5 my-3">
+            <h3>أسم القناة: <%= item.nameChanel %>
+            </h3>
+          </div>
 
-            <div class="form-floating mx-5 my-3">
-              <h3>الأرباح: <%= item.profits %></h3>
-            </div>
 
-            <div class="form-floating mx-5 my-3">
-              <h3>سنة الولاده: <%= item.dateYear %></h3>
-            </div>
+          <div class="form-floating mx-5 my-3">
+            <h3>رقم الجوال: <%= item.PhoneNum %>
+            </h3>
+          </div>
+
+          <div class="form-floating mx-5 my-3">
+            <h3>النقاط: <%= item.points %>
+            </h3>
+          </div>
+
+          <div class="form-floating mx-5 my-3">
+            <h3>الأرباح: <%= item.profits %>
+            </h3>
+          </div>
+
+          <div class="form-floating mx-5 my-3">
+            <h3>سنة الولاده: <%= item.dateYear %>
+            </h3>
+          </div>
+
+          <% if (item.hide != "on") { %>
             <a class="btn btn-primary" href="/orders/<%= id %>">إرسال طلب</a>
-            <a class="btn btn-info" href="/sallahiat/<%= id %>">صلاحياتي</a>
-          </center>
+            <% } %>
+              <a class="btn btn-info" href="/sallahiat/<%= id %>">صلاحياتي</a>
+        </center>
       </nav>
 
     </section>

@@ -13,6 +13,7 @@ const articleSchema = new Schema({
     dateYear: Number,
     profits: Number,
     dangers: Array,
+    hide: String,
 });
 
 
